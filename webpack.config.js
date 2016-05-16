@@ -23,6 +23,14 @@ module.exports = {
       test: /\.js$/,
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
+    }, {
+      test: /\.styl$/,
+      loaders: [
+        'style',
+        'css?modules&importLoaders=2&localIdentName=[local]--[hash:base64:3]',
+        'autoprefixer?browsers=last 2 version',
+        'stylus?outputStyle=expanded'
+      ]
     }]
   }
 };

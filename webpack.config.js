@@ -3,6 +3,21 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval',
+  // It suppress error shown in console, so it has to be set to false.
+  quiet: false,
+  // It suppress everything except error, so it has to be set to false as well
+  // to see success build.
+  noInfo: false,
+  stats: {
+    // Config for minimal console.log mess.
+    assets: false,
+    colors: true,
+    version: false,
+    hash: false,
+    timings: false,
+    chunks: false,
+    chunkModules: false
+  },
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
@@ -27,7 +42,7 @@ module.exports = {
       test: /\.styl$/,
       loaders: [
         'style',
-        'css?modules&importLoaders=2&localIdentName=[local]--[hash:base64:3]',
+        'css?modules&importLoaders=2&localIdentName=[folder]-[local]',
         'autoprefixer?browsers=last 2 version',
         'stylus?outputStyle=expanded'
       ]

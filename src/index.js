@@ -1,24 +1,31 @@
-import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
+import { Provider } from 'react-redux';
+
 import Routes from './Routes';
+import createStore from './createStore';
+
+const store = createStore();
 
 const rootEl = document.getElementById('root');
 ReactDOM.render(
   <AppContainer>
-    <Routes />
+    <Provider store={store}>
+      <Routes />
+    </Provider>
   </AppContainer>,
   rootEl
 );
 
 if (module.hot) {
   module.hot.accept('./Routes', () => {
-    // If you use Webpack 2 in ES modules mode, you can
-    // use <App /> here rather than require() a <NextApp />.
     const NextRoutes = require('./Routes').default;
     ReactDOM.render(
       <AppContainer>
-        <NextRoutes />
+        <Provider store={store}>
+          <NextRoutes />
+        </Provider>
       </AppContainer>,
       rootEl
     );

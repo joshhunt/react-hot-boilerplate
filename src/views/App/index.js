@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import './styles.styl';
 
-export default function({ children }) {
+export default function ({ children }) {
   return (
     <div>
       <h1>Global App wrapper</h1>

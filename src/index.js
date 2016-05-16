@@ -18,7 +18,7 @@ if (module.hot) {
     const NextRoutes = require('./Routes').default;
     ReactDOM.render(
       <AppContainer>
-         <NextRoutes />
+        <NextRoutes />
       </AppContainer>,
       rootEl
     );

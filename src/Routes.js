@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import React from 'react';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './views/App';
 import Home from './views/Home';
@@ -13,16 +13,14 @@ import NoMatch from './views/NoMatch';
 // You can ignore this warning. For details, see:
 // https://github.com/reactjs/react-router/issues/2182
 
-export default class Routes extends Component {
-  render() {
-    return (
-      <Router history={browserHistory}>
-        <Route path="/" component={App}>
-          <IndexRoute component={Home} />
-          <Route path="about" component={About}/>
-          <Route path="*" component={NoMatch}/>
-        </Route>
-      </Router>
-    );
-  }
+export default function Routes() {
+  return (
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Home} />
+        <Route path="about" component={About} />
+        <Route path="*" component={NoMatch} />
+      </Route>
+    </Router>
+  );
 }

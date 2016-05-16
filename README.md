@@ -3,6 +3,13 @@ react-hot-boilerplate (with extras)
 
 The minimal dev environment to enable live-editing React components. Based on Dan Abramov's [react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate) next branch.
 
+Added react-router, redux, css modules (with stylus).
+
+### Important note
+
+Please don't use this. I don't really intend for anyone else to use this, it's just for myself to make it easier to make spikes and what not.
+
+
 ### Usage
 
 ```

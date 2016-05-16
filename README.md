@@ -1,7 +1,7 @@
-react-hot-boilerplate
+react-hot-boilerplate (with extras)
 =====================
 
-The minimal dev environment to enable live-editing React components.
+The minimal dev environment to enable live-editing React components. Based on Dan Abramov's [react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate) next branch.
 
 ### Usage
 
@@ -11,7 +11,7 @@ npm start
 open http://localhost:3000
 ```
 
-Now edit `src/App.js`.  
+Now edit `src/views/App.js`.
 Your changes will appear without reloading the browser like in [this video](http://vimeo.com/100010922).
 
 ### Linting

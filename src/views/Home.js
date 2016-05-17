@@ -1,7 +1,7 @@
 import React from 'react';
-import Counter from '../components/Counter';
-import StarsList from '../components/StarsList';
-import { getStars } from '../actions/stars';
+import Counter from 'components/Counter';
+import StarsList from 'components/StarsList';
+import { getStars } from 'actions/stars';
 import { connect } from 'react-redux';
 
 @connect((state) => ({

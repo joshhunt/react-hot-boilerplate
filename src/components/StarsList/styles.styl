@@ -1,6 +1,29 @@
+@import '~stylus/variables'
+
 .root
-  padding: 10px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 0
+  margin-left: -10px
+  margin-right: -10px
 
 .item
+  display: inline-block
+  list-style: none
+  width: 300px
+  margin: 10px
+  padding: 20px
+  background: white
+  border: 1px solid darken($bg, 2%)
+  box-shadow: 1px 0px 8px rgba(darken($bg, 3%), 1)
+
   a
     color: white !important
+
+.title
+  margin: 0
+
+.owner
+  margin-top: .5em
+  font-weight: 500

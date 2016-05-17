@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Route, browserHistory } from 'react-router';
 
 import App from './views/App';
 import Home from './views/Home';
@@ -16,9 +16,9 @@ import NoMatch from './views/NoMatch';
 export default function Routes() {
   return (
     <Router history={browserHistory}>
-      <Route path="/" component={App}>
-        <IndexRoute component={Home} />
-        <Route path="about" component={About} />
+      <Route component={App}>
+        <Route path="/" component={Home} />
+        <Route path="/about" component={About} />
         <Route path="*" component={NoMatch} />
       </Route>
     </Router>

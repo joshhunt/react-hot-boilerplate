@@ -1,6 +1,14 @@
-$bg = #111619
+@import '~stylus/variables'
+
+* { box-sizing: border-box }
 
 html
   background: $bg
-  color: invert($bg)
+  color: $textColor
   font-family: 'DIN', sans-serif
+
+.wrapper
+  width: 100%
+  max-width: 1020px
+  padding: 15px
+  margin: auto

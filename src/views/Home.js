@@ -1,7 +1,7 @@
 import React from 'react';
 import Counter from '../components/Counter';
 import StarsList from '../components/StarsList';
-import { getStars } from '../actions/Stars';
+import { getStars } from '../actions/stars';
 import { connect } from 'react-redux';
 
 @connect((state) => ({
@@ -19,10 +19,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <h1>Home</h1>
-        <Counter />
-
-        <h2>Starred by joshhunt</h2>
+        <h1>Starred by joshhunt</h1>
         {this.props.stars && <StarsList stars={this.props.stars} />}
       </div>
     );

@@ -3,21 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'cheap-module-inline-source-map',
-  // It suppress error shown in console, so it has to be set to false.
-  quiet: false,
-  // It suppress everything except error, so it has to be set to false as well
-  // to see success build.
-  noInfo: false,
-  stats: {
-    // Config for minimal console.log mess.
-    assets: false,
-    colors: true,
-    version: false,
-    hash: false,
-    timings: false,
-    chunks: false,
-    chunkModules: false,
-  },
+
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
@@ -29,6 +15,14 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/',
   },
+
+  resolve: {
+    modulesDirectories: [
+      'src',
+      'node_modules',
+    ],
+  },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
@@ -37,7 +31,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loaders: ['babel'],
-      include: path.join(__dirname, 'src')
+      include: path.join(__dirname, 'src'),
     }, {
       test: /\.styl$/,
       loaders: [

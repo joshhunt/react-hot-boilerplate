@@ -6,9 +6,9 @@ import styles from './styles.styl';
 export default function Nav() {
   return (
     <ul className={styles.root}>
-      <li className={styles.item}><Link to="/">Home</Link></li>
-      <li className={styles.item}><Link to="/about">About</Link></li>
-      <li className={styles.item}><Link to="/wrong-url">Another Link</Link></li>
+      <li className={styles.item}><Link activeClassName={styles.active} to="/">Home</Link></li>
+      <li className={styles.item}><Link activeClassName={styles.active} to="/about">About</Link></li>
+      <li className={styles.item}><Link activeClassName={styles.active} to="/wrong-url">Another Link</Link></li>
     </ul>
   );
 }
